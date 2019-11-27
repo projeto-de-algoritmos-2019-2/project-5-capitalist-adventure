@@ -1,15 +1,15 @@
-# project-5-capitalist-adventure
-This project aims to analyze the stock prices of a particular company over a given period of time and calculate the maximum profit possible with the limited amount of buy and sell.
+# Project 5 Capitalist Adventure
+
 
 <h1 align="center">
   <br>
-    <a href="logo.png">
-      <img src="https://www.pngkey.com/png/detail/817-8178976_save-more-make-more-money-arrow-cool-pictures.png" alt="Houston, we have a problem" width="200">
+    <a href="static/logo.png">
+      <img src="static/logo.png" alt="Capitalist Adventure Logo" width="200">
     </a>
   <br>
 </h1>
 
-<h4 align="center"> Project 4 - Houston, we have a problem </h4>
+<h4 align="center"> Project 5 - Capitalist Adventure </h4>
 
 <p align="center">
   <a href="#about-the-project">About the project</a> •
@@ -17,13 +17,14 @@ This project aims to analyze the stock prices of a particular company over a giv
 </p>
 
 <p align="center">
+  TODO: ADD GIF
   <img src="timelapse.gif">
 </p>
 
-**Número da Lista**: 4<br>
-**Conteúdo da Disciplina**: Dividir e conquistar<br>
+**List Number**: 5<br>
+**Course Content**: Programação dinâmica<br>
 
-## Alunos
+## Students
 | Matrícula  | Aluno                              |
 | ---------- | ---------------------------------- |
 | 15/0150792 | Victor Moura                       |
@@ -34,61 +35,54 @@ This project aims to analyze the stock prices of a particular company over a giv
 This project was developed for the discipline
 **Algorithm Project** of FGA College in the semester 02/2019.
 
-This project implements a real-time flight panel that will
-signal when two aircraft are dangerously close.
+This project aims to analyze the stock prices of a
+particular company over a given period of time and calculate
+the maximum profit possible with the limited amount of buy
+and sell.
 
 The main goal was to develop an application that uses
-**divide and conquer** algorithm design paradigm.
+**dynamic programming** algorithm design paradigm.
 
-We use data provided by the API
-[opensky-network](https://opensky-network.org)
-to get the coordinates of the aircraft that are located in
-a certain region.
+We use data provided by the [API NAME](API LINK)
+to get the historical values of the stock of a particular
+company.
 
-We set the map of the metropolitan region of São Paulo and
-use the following coordinates for API requests.
+The application when launched returns a list of companies
+available for analysis.
 
-Lower left: (-24.493696, -48.177301)
-
-Superior right: (-22.797153, -45.566508)
-
-These coordinates get the following region
-
-<p align="center">
-  <img src="spmap.png">
-</p>
-
-In each request made to the API, the information regarding each aircraft position (latitude and longitude) is fetched. By converting the obtained coords into pixels coords, it is possible to plot the information over the map using pygame's engine.
-
-The aircraft coordinate data is used in the Closest pair of
-points problem algorithm
-[1](https://en.wikipedia.org/wiki/Closest_pair_of_points_problem).
-
-During the execution of the algorithm, the distance between
-two aircraft is computed, if this distance is smaller than
-the minimum configured distance, this pair of points is saved.
+When the company and the analysis period are determined,
+the purchase and sale dates are computed which will result
+in the maximum gain and is generated graphic for better
+visualization.
 
 ## How To Use
 
-  ```bash
-  # Clone this repository
-  $ git clone https://github.com/projeto-de-algoritmos-2019-2/project-4-flight-panel flight-panel
+  Capitalist Adventure is available in [PyPi](https://pypi.org/project/pyhuff/):
 
-  # Install virtualenv
-  $ sudo pip3 install virtualenv
-
-  # Create a env
-  $ virtualenv -p python3 env
-
-  # Activate the env
-  $ source env/bin/activate
-
-  # Install the requirements
-  $ pip install -r requirements.txt
-
-  # get in flight panel directory
-  $ cd flight-panel
-
-  # Run the application
-  $ python panel.py
+  ```sh
+  $ pip install pyhuff
   ```
+
+  ## Usage
+  To shrink a file named `example.txt`:
+  ```sh
+  $ pyhuff example.txt
+  ```
+
+  Two files will be created:
+  - **example.huff**: the encoded file
+  - **example.tree.huff**: the huffman tree used to encode the file
+
+  To restore the original file:
+  ```sh
+  $ pyhuff example.huff example.tree.huff decoded_example.txt
+  ```
+  In the example above, the decoded file will be created as `decoded_example.txt`. You can pass any filename as argument. Notice that, if the given file already exists, it will be overwritten.
+
+  To get help, simply call:
+  ```sh
+  $ pyhuff
+  ```
+  ---
+
+created by [Durval Carvalho](https://github.com/durvalcarvalho) and [Victor Moura](https://github.com/victorcmoura)
