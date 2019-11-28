@@ -1,7 +1,7 @@
 import requests
 
 
-class APIComunication():
+class APICommunication():
 
     def __init__(self, apikey):
 
@@ -26,23 +26,23 @@ class APIComunication():
 
 
 
-# NYSE: New York Stock Exchange
-NYSE = {
-    "Microsoft": "MSFT",
-    "Apple": "AAPL",
-    "Amazon": "AMZN",
-    "Google": "GOGL",
-    "Facebook": "FBNK",
-    "Alibaba": "BABA",
-    "Netflix": "NFLX",
-    "Disney": "DIS",
-    "Spotify": "SPOT",
-    "Uber": "UBER",
-    "Tesla": "TSLA",
-    "Under Armour": "UA"
-}
+# # NYSE: New York Stock Exchange
+# NYSE = {
+#     "Microsoft": "MSFT",
+#     "Apple": "AAPL",
+#     "Amazon": "AMZN",
+#     "Google": "GOGL",
+#     "Facebook": "FBNK",
+#     "Alibaba": "BABA",
+#     "Netflix": "NFLX",
+#     "Disney": "DIS",
+#     "Spotify": "SPOT",
+#     "Uber": "UBER",
+#     "Tesla": "TSLA",
+#     "Under Armour": "UA"
+# }
 
-APICon = APIComunication(apikey="GWT5VNWYEKMM0NLS")
-prices = APICon.get_stock_prices(NYSE["Google"])
+# APICon = APICommunication(apikey="GWT5VNWYEKMM0NLS")
+# prices = APICon.get_stock_prices(NYSE["Google"])
 
-print(prices)
+# print(prices)
