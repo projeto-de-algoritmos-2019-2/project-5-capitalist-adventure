@@ -20,7 +20,7 @@ class APIComunication():
         response = requests.get(self.base_url % symbol)
         data = response.json()
         data = data["Time Series (Daily)"]
-        
+
         prices = { date: values["4. close"] for date, values in data.items() }
         return prices
 
@@ -28,12 +28,12 @@ class APIComunication():
 
 # NYSE: New York Stock Exchange
 NYSE = {
-    "Microsoft": "MSFT", 
-    "Apple": "AAPL", 
-    "Amazon": "AMZN", 
-    "Google": "GOGL", 
-    "Facebook": "FBNK", 
-    "Alibaba": "BABA", 
+    "Microsoft": "MSFT",
+    "Apple": "AAPL",
+    "Amazon": "AMZN",
+    "Google": "GOGL",
+    "Facebook": "FBNK",
+    "Alibaba": "BABA",
     "Netflix": "NFLX",
     "Disney": "DIS",
     "Spotify": "SPOT",

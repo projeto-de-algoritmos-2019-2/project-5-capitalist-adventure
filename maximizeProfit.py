@@ -50,12 +50,13 @@ def max_profit(prices, K):
                 T[transaction - 1][day] - prices[day]
             )
 
-    print_actual_solution(T, prices)
+    return print_actual_solution(T, prices)
 
-    return T[-1][-1]
+    # return T[-1][-1]
 
 
 def print_actual_solution(T, prices):
+
     transaction = len(T) - 1
     day = len(T[0]) - 1
     stack = []
@@ -64,26 +65,27 @@ def print_actual_solution(T, prices):
         if transaction == 0 or day == 0:
             break
 
-        if T[transaction][day] == T[transaction][day - 1]:  # Didn't sell
+        # if what i have today is the same i had yesterday, today i dint sell nothing
+        if T[transaction][day] == T[transaction][day-1]:
             day -= 1
+
         else:
-            stack.append(day)          # sold
+            stack.append((day, 'Sell'))
+
             max_diff = T[transaction][day] - prices[day]
-            for k in range(day - 1, -1, -1):
-                if T[transaction - 1][k] - prices[k] == max_diff:
-                    stack.append(k)  # bought
+
+            for k in range(day-1, -1, -1):
+                if(T[transaction-1][k] - prices[k] == max_diff):
+                    stack.append((k, 'Buy'))
                     transaction -= 1
                     break
 
-    for entry in range(len(stack) - 1, -1, -2):
-        print("Buy on day {day} at price {price}".format(day=stack[entry], price=prices[stack[transaction]]))
-        print("Sell on day {day} at price {price}".format(day=stack[entry], price=prices[stack[transaction - 1]]))
+    return list(reversed(stack))
 
 
 if __name__ == '__main__':
 
     prices = [2, 5, 7, 1, 4, 3, 1, 3]
-    max_profit(prices, 2)
+    transactions =  max_profit(prices, 2)
 
-    # assert 10 == max_profit(prices, 3)
-    # assert 10 == max_profit_slow_solution(prices, 3)
+    print(transactions)
