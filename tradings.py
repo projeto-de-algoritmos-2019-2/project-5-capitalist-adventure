@@ -62,6 +62,7 @@ def print_actual_solution(T, prices):
     stack = []
 
     while True:
+
         if transaction == 0 or day == 0:
             break
 
@@ -75,9 +76,11 @@ def print_actual_solution(T, prices):
             max_diff = T[transaction][day] - prices[day]
 
             for k in range(day-1, -1, -1):
+
                 if(T[transaction-1][k] - prices[k] == max_diff):
                     stack.append((k, 'Buy'))
                     transaction -= 1
+                    day = k
                     break
 
     return list(reversed(stack))
@@ -85,7 +88,10 @@ def print_actual_solution(T, prices):
 
 if __name__ == '__main__':
 
-    prices = [2, 5, 7, 1, 4, 3, 1, 3]
-    transactions =  max_profit(prices, 2)
+    prices = [13.5,13.13,13.31,13.25,13.38,13.13,13.19,12.5,12.19,12.25,12.0,12.0,13.0,14.0,13.75,12.88,11.88,13.0,12.94,12.44]
+    transactions =  max_profit(prices, 3)
 
-    print(transactions)
+    for t in transactions:
+        print(t)
+
+    # print(transactions)
