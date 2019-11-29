@@ -16,7 +16,7 @@
   <a href="#how-to-use">How To Use</a> •
 </p>
 
-## Valores d
+## Graphics generated on Companies Stocks only allowing 3 operations
 
 <p align="center">
   <img src="static/apple_stocks.png">
@@ -34,8 +34,8 @@
 </p>
 
 <p align="center">
-  <img src="staticg/oogle_stocks.png">
-  <p> Microft Stocks </p>
+  <img src="static/google_stocks.png">
+  <p> Google Stocks </p>
 </p>
 
 **List Number**: 5<br>
