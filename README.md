@@ -16,9 +16,26 @@
   <a href="#how-to-use">How To Use</a> •
 </p>
 
+## Valores d
+
 <p align="center">
-  TODO: ADD GIF
-  <img src="timelapse.gif">
+  <img src="static/apple_stocks.png">
+  <p> Apple Stocks </p>
+</p>
+
+<p align="center">
+  <img src="static/amazon_stocks.png">
+  <p> Amazon Stocks </p>
+</p>
+
+<p align="center">
+  <img src="static/microsoft_stocks.png">
+  <p> Microft Stocks </p>
+</p>
+
+<p align="center">
+  <img src="staticg/oogle_stocks.png">
+  <p> Microft Stocks </p>
 </p>
 
 **List Number**: 5<br>
@@ -43,7 +60,7 @@ and sell.
 The main goal was to develop an application that uses
 **dynamic programming** algorithm design paradigm.
 
-We use data provided by the [API NAME](API LINK)
+We use data provided by the [Alpha Vantage](https://www.alphavantage.co/)
 to get the historical values of the stock of a particular
 company.
 
@@ -56,33 +73,11 @@ in the maximum gain and is generated graphic for better
 visualization.
 
 ## How To Use
+  
+  Capitalist Adventure is available in [Google Colab](https://colab.research.google.com/github/projeto-de-algoritmos-2019-2/project-5-capitalist-adventure/blob/master/OptimalTradingStrategies_DPApproach.ipynb):
 
-  Capitalist Adventure is available in [PyPi](https://pypi.org/project/pyhuff/):
-
-  ```sh
-  $ pip install pyhuff
-  ```
-
-  ## Usage
-  To shrink a file named `example.txt`:
-  ```sh
-  $ pyhuff example.txt
-  ```
-
-  Two files will be created:
-  - **example.huff**: the encoded file
-  - **example.tree.huff**: the huffman tree used to encode the file
-
-  To restore the original file:
-  ```sh
-  $ pyhuff example.huff example.tree.huff decoded_example.txt
-  ```
-  In the example above, the decoded file will be created as `decoded_example.txt`. You can pass any filename as argument. Notice that, if the given file already exists, it will be overwritten.
-
-  To get help, simply call:
-  ```sh
-  $ pyhuff
-  ```
-  ---
+  <a href="https://colab.research.google.com/github/projeto-de-algoritmos-2019-2/project-5-capitalist-adventure/blob/master/OptimalTradingStrategies_DPApproach.ipynb" target="_parent">
+      <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+  </a>
 
 created by [Durval Carvalho](https://github.com/durvalcarvalho) and [Victor Moura](https://github.com/victorcmoura)
