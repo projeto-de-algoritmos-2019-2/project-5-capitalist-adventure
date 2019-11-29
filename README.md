@@ -20,22 +20,18 @@
 
 <p align="center">
   <img src="static/apple_stocks.png">
-  <p> Apple Stocks </p>
 </p>
 
 <p align="center">
   <img src="static/amazon_stocks.png">
-  <p> Amazon Stocks </p>
 </p>
 
 <p align="center">
   <img src="static/microsoft_stocks.png">
-  <p> Microft Stocks </p>
 </p>
 
 <p align="center">
   <img src="static/google_stocks.png">
-  <p> Google Stocks </p>
 </p>
 
 **List Number**: 5<br>
